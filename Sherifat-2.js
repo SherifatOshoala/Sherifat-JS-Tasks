@@ -1,5 +1,5 @@
 let number1 = "  The morning is upon us  ";
-let result = number1.trim().slice(3, 12);
+let result = number1.trim().slice(2, 11);
 console.log(result);
 
 let number2 = "The quick brown fox jumps over the lazy dog";
@@ -16,30 +16,26 @@ let result3 = number3.trimEnd().includes("o");
 console.log(result3);
 
 let number4 = "abcdefg";
-let lengthOfnumber4 = number4.length;
-let result4 = number4.slice(0, lengthOfnumber4).charAt(0);
-let result4a = number4.slice(0, lengthOfnumber4).charAt(2);
-let result4b = number4.slice(0, lengthOfnumber4).charAt(4);
-let result4c = number4.slice(0, lengthOfnumber4).charAt(6);
-let result4Final = result4.concat(result4a, result4b, result4c);
+let lengthOfNumber4 = number4.length;
+let result4 = number4.slice(0, lengthOfNumber4);
+let result4a = result4.charAt(0);
+let result4b = result4.charAt(2);
+let result4c = result4.charAt(4);
+let result4d = result4.charAt(6);
+let result4Final = result4a.concat(result4b, result4c, result4d);
 console.log(result4Final);
 
 let number5 = "example example example";
-let lengthOfExample = "example".length;
-let indexOfExample = number5.indexOf("example");
-let secondOccurrenceOfExampleIndex = number5.indexOf(
-  "example",
-  indexOfExample + 1
-);
-let secondOccurrenceOfExample = number5.slice(
-  secondOccurrenceOfExampleIndex,
-  secondOccurrenceOfExampleIndex + lengthOfExample
-);
-let result5 = secondOccurrenceOfExample.charAt(5);
-let result5a = secondOccurrenceOfExample.charAt(2);
-let result5b = secondOccurrenceOfExample.charAt(3);
-let result5c = secondOccurrenceOfExample.charAt(4);
-let result5Final = result5.concat(result5a, result5b, result5c);
+let firstSpace = number5.indexOf(" ");
+console.log("firstOccurrenceOfSpace:", firstSpace);
+let secondSpace = number5.indexOf(" ", firstSpace + 1);
+console.log(secondSpace);
+let secondExample = number5.slice(firstSpace + 1, secondSpace);
+console.log(secondExample);
+
+let result5 = secondExample.charAt(5);
+let result5a = secondExample.slice(2, 5);
+let result5Final = result5.concat(result5a);
 console.log(result5Final);
 
 let number6 = "  Hello, World!  ";
@@ -48,9 +44,9 @@ let result6 = number6Trim.charAt(number6Trim.length - 1);
 console.log(result6);
 
 let number7 = "Hello, World!";
-let lengthOfWorld = "World".length;
+// let lengthOfWorld = "World".length;
 let indexOfWorld = number7.indexOf("World");
-let result7 = number7.slice(indexOfWorld, indexOfWorld + lengthOfWorld);
+// let result7 = number7.slice(indexOfWorld, indexOfWorld + lengthOfWorld);
 // or
 let result7b = number7.slice(indexOfWorld, number7.length - 1);
 console.log(result7b);
@@ -90,3 +86,15 @@ let newC = c
   .replaceAll("s", "5")
   .trim();
 console.log(newC);
+
+let Java = "javascript javascript javascript";
+let trimJava = Java.trim();
+let firstOccurrenceOfSpace = Java.indexOf(" ");
+console.log("firstOccurrenceOfSpace:", firstOccurrenceOfSpace);
+let secondOccurrenceOfSpace = Java.indexOf(" ", firstOccurrenceOfSpace + 1);
+console.log(secondOccurrenceOfSpace);
+let secondOccurrenceOfJavascript = Java.slice(
+  firstOccurrenceOfSpace + 1,
+  secondOccurrenceOfSpace
+);
+console.log(secondOccurrenceOfJavascript);
