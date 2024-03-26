@@ -19,14 +19,14 @@ if (no1a.startsWith("-") === true) {
   console.log("Positive");
 }
 
-let no2 = 22;
+let no2 = 23;
 if (no2 % 2 === 0) {
   console.log("Even");
 } else {
-  console.log("odd");
+  console.log("Odd");
 }
 
-let age = 23;
+let age = 24;
 if (age % 5 === 0) {
   console.log("Multiple of 5");
 } else if (age % 3 === 0) {
@@ -35,7 +35,7 @@ if (age % 5 === 0) {
   console.log("Neither");
 }
 
-let year = 2999;
+let year = 1901;
 
 if (year >= 1901 && year <= 2000) {
   console.log("20th Century");
