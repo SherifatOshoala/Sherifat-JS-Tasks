@@ -1,8 +1,10 @@
-let no1 = Math.sign(-100);
 
-if (no1 === 1) {
+
+let no1 = 100
+
+if (no1 > 0) {
   console.log("Positive");
-} else if (no1 === 0) {
+} else if (no1 = 0) {
   console.log("Zero");
 } else {
   console.log("Negative");
@@ -10,14 +12,14 @@ if (no1 === 1) {
 
 // OR string the number
 
-let no1a = "100";
-if (no1a.startsWith("-") === true) {
-  console.log("Negative");
-} else if (no1 === 0) {
-  console.log("Zero");
-} else {
-  console.log("Positive");
-}
+// let no1c = "100";
+// if (no1c.startsWith("-") === true) {
+//   console.log("Negative");
+// } else if (no1 === 0) {
+//   console.log("Zero");
+// } else {
+//   console.log("Positive");
+// }
 
 let no2 = 23;
 if (no2 % 2 === 0) {
