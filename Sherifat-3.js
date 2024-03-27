@@ -24,7 +24,7 @@ if (no1 > 0) {
 // OR string the number
 
 // let no1c = "-100";
-// if (no1c.startsWith("-") === true) {
+// if (no1c.startsWith("-") === true) {git
 //   console.log("Negative");
 // } else if (no1c === 0) {
 //   console.log("Zero");
@@ -60,7 +60,7 @@ if (year >= 1901 && year <= 2000) {
   console.log("none");
 }
 
-let a = 90;
+let a = 2;
 let b;
 
 if (a < 10) {
