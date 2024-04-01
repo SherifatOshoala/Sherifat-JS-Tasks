@@ -8,29 +8,17 @@ if (no1 > 0) {
   console.log("Negative");
 }
 
-// OR math.sign
-
-// let no1b = -20;
-// let no1b2 = Math.sign(no1b);
-
-// if (no1b2 === 1) {
-//   console.log("Positive");
-// } else if (no1b2 === 0) {
-//   console.log("Zero");
-// } else {
-//   console.log("Negative");
-// }
-
 // OR string the number
 
-// let no1c = "-100";
-// if (no1c.startsWith("-") === true) {git
-//   console.log("Negative");
-// } else if (no1c === 0) {
-//   console.log("Zero");
-// } else {
-//   console.log("Positive");
-// }
+let no1c = "-100";
+if (no1c.startsWith("-") === true) {
+  git;
+  console.log("Negative");
+} else if (no1c === 0) {
+  console.log("Zero");
+} else {
+  console.log("Positive");
+}
 
 let no2 = 23;
 if (no2 % 2 === 0) {
