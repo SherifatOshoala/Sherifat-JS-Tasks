@@ -35,6 +35,7 @@ if (isWeekend === true) {
     }
   }
 }
+
 // 3. In an organization , bonus to be shared for staff who have spent at least 10 years with
 // the company to get 5% on their salary. Write an if-else to calculate if a staff is or isn't
 // entiled to the bonus and how much.
