@@ -86,10 +86,20 @@ if (side1 === side2 && side1 === side3 && side2 === side3) {
 
 // 6. Write JavaScript code to take a number and check whether it is a Buzz number or not. A
 // number is a buzz number when it ends with 7 or is divisible by 7
-let Number = "407";
+let Number = "16807";
 
 if (Number % 7 === 0 || Number.endsWith("7") === true) {
-  console.log("It is a buzz word");
+  console.log("It is a buzz number");
 } else {
-  console.log("It's not a buzz word");
+  console.log("It's not a buzz number");
+}
+
+// OR
+
+let Numberr = "47";
+
+if (Numberr % 7 === 0 || Numberr.charAt(Numberr.length - 1) === "7") {
+  console.log("It is a buzz number");
+} else {
+  console.log("It's not a buzz number");
 }
