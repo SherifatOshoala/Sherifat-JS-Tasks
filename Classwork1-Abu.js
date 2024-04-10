@@ -30,17 +30,17 @@ if (number > 0) {
 }
 
 //  4.⁠ ⁠Write a program to check whether a year is leap year or not.
-let year = "369 days";
-if (year === "366 days") {
+let year = 2024;
+
+if (year % 4 === 0) {
   console.log("It's a leap year");
-} else if (year === "365 days") {
-  console.log("Not a leap year");
 } else {
-  console.log("Doesn't exist");
+  console.log("Not a leap year");
 }
 
 //  5.⁠ ⁠Write a program to check whether a character is alphabet or not.
-let alphabet = "b";
+let alphabet = "A";
+alphabet = alphabet.toLowerCase()
 if (alphabet >= "a" && alphabet <= "z") {
   console.log("It's an alphabet");
 } else {
@@ -48,7 +48,9 @@ if (alphabet >= "a" && alphabet <= "z") {
 }
 
 //  6.⁠ ⁠Write a program to input any alphabet and check whether it is vowel or consonant.
-let alphabet2 = "e";
+let alphabet2 = "B";
+alphabet2 = alphabet2.toLowerCase();
+
 if (
   alphabet2 === "a" ||
   alphabet2 === "e" ||
@@ -69,7 +71,7 @@ if (
 
 // Basic Salary > 20000 : Allowance 1 = 30%, Allowance 2 = 95%
 
-let basicSalary = 50000;
+let basicSalary = 5000;
 let allowance1;
 let allowance2;
 let grossSalary;
@@ -80,12 +82,11 @@ if (basicSalary <= 10000) {
 } else if (basicSalary > 10000 && basicSalary <= 20000) {
   allowance1 = (25 / 100) * basicSalary;
   allowance2 = (90 / 100) * basicSalary;
-} else if (basicSalary > 20000) {
+} else {
   allowance1 = (30 / 100) * basicSalary;
   allowance2 = (95 / 100) * basicSalary;
-} else {
-  console.log("You don't work here");
 }
+
 grossSalary = basicSalary + allowance1 + allowance2;
 console.log(grossSalary);
 
@@ -98,7 +99,7 @@ console.log(grossSalary);
 // For unit above 250 (supposed to be 450), N1.50/unit
 // An additional surcharge of 20% is added to the bill
 
-let units = 20;
+let units = 500;
 let unitsCharge;
 let surcharge;
 let totalBill;
