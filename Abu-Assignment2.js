@@ -44,6 +44,18 @@ for (i = 0; i < string.length; i++) {
 }
 console.log(newString);
 
+let tobi = "Omosholape, go girl you badd";
+let newTobi = "";
+
+for (i = 0; i < tobi.length; i++) {
+  if (tobi.charAt(i - 2) === " " || i === 1) {
+    newTobi = newTobi.concat("Z");
+  } else {
+    newTobi = newTobi.concat(tobi.charAt(i));
+  }
+}
+console.log(newTobi);
+
 // 6.⁠ ⁠Check if a string contains the letter “y”. Print “yes” if it does and “no” if it does not.
 let string2 = "Pelz";
 for (i = 0; i < string2.length; i++) {
@@ -63,15 +75,15 @@ if (string3.includes("y")) {
 
 // 7.⁠ ⁠Given any number, write a program to calculate the factorial of the number.
 // (Hint: Factorial is any number multiplied by the natural integers before it up to 1. eg: Factorial of 5 = 5x4x3x2x1)
-let num = 5;
+let num = 1;
 let factorial = 1;
-for (i = num; i > 0; i--) {
+for (i = num; i > 1; i--) {
   factorial = factorial * i;
 }
 console.log(factorial);
 
 // 8.⁠ ⁠Write a program that use a loop to check if a given string is a palindrome. Remember, a palindrome is a word/sentence that spells the same forward and backward.
-let name = "racecar";
+let name = "racecar a racecar";
 let newName = "";
 
 for (i = name.length - 1; i >= 0; i--) {
@@ -108,11 +120,9 @@ let myNewName2 = "";
 
 for (i = myName2.length - 1; i >= 0; i--) {
   if (i === myName2.length - 1) {
-    myNewName2 = myNewName2.concat(
-      myName2.toUpperCase().charAt(myName2.length - 1)
-    );
+    myNewName2 += myName2.toUpperCase().charAt(i);
   } else {
-    myNewName2 = myNewName2.concat(myName2.charAt(i));
+    myNewName2 += myName2.charAt(i);
   }
 }
 console.log(myNewName2);

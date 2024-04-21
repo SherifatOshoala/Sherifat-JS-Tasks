@@ -1,6 +1,17 @@
 // 1.⁠ ⁠Write a JavaScript function to clone an array.
 
-let array1 = ["sherifat", "20", "Raodat", "20", "Zeeky", "Zeeky"];
+let array1 = [
+  "sherifat",
+  "Aduks",
+  "20",
+  "Raodat",
+  "20",
+  "Aduks",
+  "Abass",
+  "Umm",
+  "Zeeky",
+  "Zeeky",
+];
 
 const duplicate = (arrayVar) => {
   let array2 = [];
@@ -27,7 +38,7 @@ console.log(returnElements(array1, 3));
 // // 3.⁠ ⁠Write a JavaScript program that accepts a number as input and inserts dashes (-) between each even number.
 // For example if you accept 025468 the output should be 0-254-6-8.
 
-let number = 12456788;
+let number = 124567848;
 
 const evenNumberDash = (num) => {
   let splittedNum = String(num).split("");
@@ -46,6 +57,18 @@ const evenNumberDash = (num) => {
 console.log(evenNumberDash(number));
 
 // 4.⁠ ⁠Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity).
+let array4 = [
+  "sherifat",
+  "Aduks",
+  "20",
+  "Raodat",
+  "20",
+  "Aduks",
+  "Abass",
+  "Umm",
+  "Zeeky",
+  "Zeeky",
+];
 const removeDuplicate = (arrayy) => {
   let arrayy2 = [];
   for (i = 0; i < arrayy.length; i++) {
@@ -58,16 +81,8 @@ const removeDuplicate = (arrayy) => {
   return arrayy2;
 };
 
-console.log(removeDuplicate(array1));
+console.log(removeDuplicate(array4));
 
 // 5.⁠ ⁠Write a JavaScript program to find the most frequent item in an array.
 // Sample array : var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
 // // Sample Output : a
-
-// const mostFrequent = (insertArray)=>{
-
-//     for(i=0;i<insertArray.length;i++){
-//         let insertArray=
-//     }
-
-// }
