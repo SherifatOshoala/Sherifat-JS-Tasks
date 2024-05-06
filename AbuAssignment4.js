@@ -116,3 +116,75 @@ const sumElementsToTarget = (array, target) => {
 };
 
 console.log(sumElementsToTarget(array, 9));
+
+// Extra: Something real...
+
+// Problem Description:
+// You are tasked with creating a program to manage a student database for a school. The database should allow you to
+// perform various operations such as adding new students, retrieving student information, updating student details, and
+// generating reports based on student data.
+
+// Requirements:
+// Use JavaScript objects to represent individual students.
+// Implement static methods of Object for managing the student database efficiently.
+// Functionality:
+
+// Adding Students:
+// Implement a function addStudent(id, name, age, grade) that adds a new student to the database. Each student should be
+//  represented as an object with properties like id, name, age, and grade.
+
+// Retrieving Student Information:
+// Create a function getStudentById(id) that retrieves a student's information based on their id from the database. Use
+// Object.keys() or Object.values() to iterate through the student objects and find the matching student.
+
+// Updating Student Details:
+// Develop a function updateStudent(id, updatedInfo) that updates the details of a student identified by id with the
+// provided updatedInfo. Use Object.assign() to merge the updated information into the existing student object.
+
+// Generating Reports:
+// Implement a function generateGradeReport(grade) that generates a report listing all students belonging to a specific
+// grade. Use Object.values() to iterate through the student objects, filter by grade, and construct the report.
+
+let studentDatabase = {
+  studentsDetails: [
+    { ID: "001", StudentName: "Sherifat Oshoala", Age: 50, Grade: 2 },
+    { ID: "002", StudentName: "Raodat Oshoala", Age: 20, Grade: 2 },
+    { ID: "003", StudentName: "Shukurat Oshoala", Age: 30, Grade: 1 },
+  ],
+  AddStudent: (ID, StudentName, Age, Grade) => {
+    let student = { ID: ID, StudentName: StudentName, Age: Age, Grade: Grade };
+    studentDatabase.studentsDetails.push(student);
+  },
+
+  getStudentByID: (ID) => {
+    let values = Object.values(studentDatabase.studentsDetails);
+    let student = values.find((elem) => {
+      return elem.ID === ID;
+    });
+    return student;
+  },
+  UpdateStudent: (ID, updateInfo) => {
+    let student = studentDatabase.getStudentByID(ID);
+    Object.assign(student, updateInfo);
+  },
+  generateGradeReport: (grade) => {
+    let values = Object.values(studentDatabase.studentsDetails);
+    let studentsInGrade = values.filter((elem) => {
+      return elem.Grade === grade;
+    });
+    let report = [];
+    studentsInGrade.forEach((elem) => {
+      report.push(elem.ID + " - " + elem.StudentName);
+    });
+    console.log(report);
+    return "Students in grade " + grade + " include: " + report.join(", ");
+  },
+};
+
+// studentDatabase.AddStudent("004", "Quawiyyat Oshoala", 60, 6);
+// console.log(studentDatabase.getStudentByID("004"));
+// console.log(studentDatabase.UpdateStudent("002"));
+// studentDatabase.UpdateStudent("002", { ID: "002" });
+
+// console.log(studentDatabase.studentsDetails);
+// console.log(studentDatabase.generateGradeReport(2));
